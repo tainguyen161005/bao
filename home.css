@@ -1,4 +1,5 @@
 
+/* General reset and body styling */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -6,6 +7,7 @@ body {
     color: #ffffff;
 }
 
+/* Navbar styling */
 .navbar {
     padding: 10px 0;
     background: rgba(0, 0, 0, 0.8);
@@ -38,12 +40,42 @@ body {
     transition: color 0.3s, text-shadow 0.3s;
 }
 
-.nav-item.active .nav-link,
-.nav-link:hover {
+/* HOME active glow and pulse */
+.nav-item.active .nav-link {
     color: #00AFFF;
-    text-shadow: 0 0 10px #00AFFF;
+    text-shadow: 0 0 5px #00AFFF, 0 0 10px #00AFFF, 0 0 20px #00AFFF;
+    animation: glowPulse 2s ease-in-out infinite;
 }
 
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 5px #00AFFF;
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 20px #00AFFF, 0 0 30px #00AFFF;
+        transform: scale(1.05);
+    }
+    100% {
+        text-shadow: 0 0 5px #00AFFF;
+        transform: scale(1);
+    }
+}
+
+/* Optional hover vibration */
+.nav-item.active .nav-link:hover {
+    animation: vibration 0.3s linear;
+}
+
+@keyframes vibration {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(1px); }
+    50% { transform: translateX(-1px); }
+    75% { transform: translateX(1px); }
+    100% { transform: translateX(0); }
+}
+
+/* Hero section */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -72,6 +104,21 @@ body {
     50% { border-color: transparent }
 }
 
+/* Animated text change loop */
+.dynamic-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00AFFF;
+    animation: typingLoop 4s steps(40, end) infinite, blink 0.7s step-end infinite;
+}
+
+@keyframes typingLoop {
+    0% { width: 0 }
+    50% { width: 100% }
+    100% { width: 0 }
+}
+
 .hero p {
     font-size: 1.2em;
     margin: 10px 0;
@@ -88,6 +135,7 @@ body {
     }
 }
 
+/* Contact button */
 .contact-btn {
     display: inline-block;
     padding: 10px 20px;
