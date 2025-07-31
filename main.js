@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Set initial active state based on current page
-  const currentPage = window.location.pathname.split('/').pop();
+  const currentPage = window.location.pathname.split('/').pop() || 'home.html'; // Default to home.html if no match
   navLinks.forEach(link => {
     if (link.getAttribute("href") === currentPage) {
       link.closest(".nav-item").classList.add("active");
@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set canvas size
     canvas.width = 120;
     canvas.height = 120;
+
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw background circle
     ctx.lineWidth = 8;
