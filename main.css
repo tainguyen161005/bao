@@ -3,6 +3,12 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .navbar {
@@ -275,8 +281,6 @@ body {
     }
 }
 
-/* === THÊM CÁC HIỆU ỨNG MỚI === */
-
 .fade-down {
     opacity: 0;
     transform: translateY(-40px);
@@ -310,4 +314,28 @@ body {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Animation theo yêu cầu của bạn */
+.animated-name {
+    animation: fadeDown 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.animated-title {
+    animation: fadeCenter 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+.animated-contact {
+    animation: fadeUp 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 2.4s;
+}
+
+.social-icons {
+    animation: fadeUp 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 3.6s;
 }
