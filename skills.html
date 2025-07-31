@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skills - Mohamed Azouaoui</title>
-    <link rel="stylesheet" href="main.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills Section</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="home.html" class="nav-link"><i class='bx bx-home'></i> HOME</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link"><i class='bx bx-user'></i> ABOUT</a></li>
-            <li class="nav-item active"><a href="skills.html" class="nav-link"><i class='bx bx-code'></i> SKILLS</a></li>
-            <li class="nav-item"><a href="portfolio.html" class="nav-link"><i class='bx bx-diamond'></i> PORTFOLIO</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link"><i class='bx bx-envelope'></i> CONTACT</a></li>
-        </ul>
-    </nav>
+  <section id="skills" class="skills-section">
+    <h2>SKILLS</h2>
+    <p>Tôi có kinh nghiệm sâu về...
+</p>
 
-    <!-- Skills Section -->
-    <section class="skills" style="margin-top: 60px;">
-        <h2>SKILLS</h2>
-        <div class="skill-list">
-            <div class="skill-item">HTML5 <span>90%</span></div>
-            <div class="skill-item">CSS3 <span>85%</span></div>
-            <div class="skill-item">JavaScript <span>80%</span></div>
-            <div class="skill-item">React <span>75%</span></div>
-            <div class="skill-item">Node.js <span>70%</span></div>
-        </div>
-    </section>
+    <div class="skills-charts">
+      <div class="chart">
+        <canvas class="circle" data-percent="85"></canvas>
+        <p>Front End</p>
+      </div>
+      <div class="chart">
+        <canvas class="circle" data-percent="75"></canvas>
+        <p>Back End</p>
+      </div>
+      <div class="chart">
+        <canvas class="circle" data-percent="90"></canvas>
+        <p>Responsive Design</p>
+      </div>
+      <div class="chart">
+        <canvas class="circle" data-percent="70"></canvas>
+        <p>GIS Programming</p>
+      </div>
+    </div>
 
+    <div class="technical-skills">
+      <div class="column">
+        <p>Javascript / ES6, ES7, ES8,...</p>
+        <p>Typescript</p>
+        <p>React / Redux</p>
+        <p>Angular</p>
+        <p>JQuery</p>
+        <p>HTML5 / CSS3 / SCSS</p>
+        <p>Bootstrap / Material UI</p>
+      </div>
+      <div class="column">
+        <p><strong>TECHNICAL SKILLS</strong></p>
+        <p>Node.js / Express.js</p>
+        <p>Python</p>
+        <p>Firebase</p>
+        <p>MongoDB</p>
+        <p>PostgreSQL</p>
+        <p>Jest</p>
+        <p>Docker</p>
+      </div>
+      <div class="column">
+        <p>ArcGIS / ArcGIS JS API</p>
+        <p>QGIS / PyQGIS</p>
+        <p>Git / GitHub</p>
+        <p>Webpack</p>
+        <p>Gulp / Grunt</p>
+        <p>Babel</p>
+        <p>Scrum / Git flow</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="main.js"></script>
+  <script src="skill.js"></script>
 </body>
 </html>
