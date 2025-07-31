@@ -3,6 +3,11 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
+    background-image: url('assets/images/background.jpg'); /* Thay bằng đường dẫn ảnh nền của bạn */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -55,6 +60,7 @@ body {
     padding: 80px 20px 50px;
     text-align: center;
     margin-top: 60px;
+    position: relative;
 }
 
 .skills-section h2 {
@@ -93,6 +99,12 @@ body {
     margin-top: 10px;
 }
 
+.skills-section h3 {
+    font-size: 1.5em;
+    color: #00AFFF;
+    margin: 20px 0 10px;
+}
+
 .technical-skills {
     display: flex;
     justify-content: center;
@@ -108,8 +120,4 @@ body {
 
 .technical-skills p {
     margin: 8px 0;
-}
-
-.technical-skills .column:first-child p:first-child {
-    font-weight: bold;
 }
