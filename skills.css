@@ -13,14 +13,17 @@ header {
 }
 
 nav a {
-  color: #fff;
-  margin: 0 15px;
+  margin: 0 10px;
   text-decoration: none;
-  font-size: 18px;
 }
 
-nav a.active {
-  color: #1E90FF;
+nav a img {
+  width: 24px;
+  height: 24px;
+}
+
+nav a.active img {
+  filter: brightness(2);
 }
 
 #skills {
@@ -42,37 +45,16 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
-.skill-item {
+.skill-circle {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
-.skill-item span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  color: #00ff00;
-  z-index: 2;
-}
-
-.skill-item p {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  font-size: 1.2em;
-  z-index: 2;
-}
-
-.skill-item::before {
+.skill-circle::before {
   content: '';
   position: absolute;
   top: 0;
@@ -81,14 +63,33 @@ h2 {
   height: 100%;
   border-radius: 50%;
   background: conic-gradient(#00ff00 0%, #00ff00 0%, #ccc 0% 100%);
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
+}
+
+.skill-circle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: #00ff00;
+  z-index: 1;
+}
+
+.skill-circle p {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 1em;
   z-index: 1;
 }
 
 .tech-skills {
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 .tech-skills ul {
@@ -98,5 +99,5 @@ h2 {
 
 .tech-skills li {
   margin-bottom: 10px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
