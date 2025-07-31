@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Mohamed Azouaoui</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="portfolio.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -18,20 +18,35 @@
             <li class="nav-item"><a href="contact.html" class="nav-link"><i class='bx bx-envelope'></i> CONTACT</a></li>
         </ul>
     </nav>
+<h1 class="title">My Portfolio</h1>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" style="margin-top: 60px;">
-        <h2>PORTFOLIO</h2>
-        <div class="portfolio-item">
-            <h3>Project 1</h3>
-            <p>A responsive web application built with React and Node.js.</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project 2</h3>
-            <p>A portfolio website designed with HTML, CSS, and JavaScript.</p>
-        </div>
-    </section>
+  <div class="portfolio-grid">
+    <div class="portfolio-item" data-index="0">
+      <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1">
+    </div>
+    <div class="portfolio-item" data-index="1">
+      <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2">
+    </div>
+    <div class="portfolio-item" data-index="2">
+      <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3">
+    </div>
+    <div class="portfolio-item" data-index="3">
+      <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4">
+    </div>
+    <div class="portfolio-item" data-index="4">
+      <img src="https://via.placeholder.com/300x200?text=Project+5" alt="Project 5">
+    </div>
+  </div>
 
-    <script src="main.js"></script>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div id="modal-tags"></div>
+    </div>
+  </div>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>
