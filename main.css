@@ -75,36 +75,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #00AFFF;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid #00AFFF;
-    width: 0;
-    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink {
-    50% { border-color: transparent }
+    opacity: 0; /* Ban đầu ẩn để animation hoạt động */
 }
 
 .hero p {
     font-size: 1.2em;
     margin: 10px 0;
     color: #ccc;
-    animation: pulseText 3s ease-in-out infinite;
-}
-
-@keyframes pulseText {
-    0%, 100% {
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 1;
-    }
 }
 
 .contact-btn {
@@ -141,26 +118,31 @@ body {
     color: #00AFFF;
 }
 
+/* Animation đã điều chỉnh */
 .animated-name {
     animation: fadeDown 1.2s ease-out forwards;
     opacity: 0;
+    transform: translateY(-40px); /* Di chuyển từ trên xuống */
 }
 
 .animated-title {
     animation: fadeCenter 1.2s ease-out forwards;
     opacity: 0;
+    transform: scale(0.95); /* Hiệu ứng từ trong ra ngoài */
     animation-delay: 1.2s;
 }
 
 .animated-contact {
     animation: fadeUp 1.2s ease-out forwards;
     opacity: 0;
+    transform: translateY(40px); /* Di chuyển từ dưới lên */
     animation-delay: 2.4s;
 }
 
 .social-icons {
     animation: fadeUp 1.2s ease-out forwards;
     opacity: 0;
+    transform: translateY(40px); /* Di chuyển từ dưới lên */
     animation-delay: 3.6s;
 }
 
