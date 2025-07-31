@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const skillItems = document.querySelectorAll('.skill-item');
-  skillItems.forEach(item => {
-    const percentage = parseInt(item.querySelector('span').textContent);
-    const circle = item.querySelector('::before');
+  const skillCircles = document.querySelectorAll('.skill-circle');
+  skillCircles.forEach(circle => {
+    const percentage = parseInt(circle.querySelector('span').textContent);
     const angle = (percentage / 100) * 360;
-    item.style.setProperty('--angle', `${angle}deg`);
+    circle.style.setProperty('--progress', `${angle}deg`);
   });
 });
