@@ -1,5 +1,7 @@
-// Bạn có thể thêm logic động ở đây, ví dụ: cập nhật phần trăm động
-document.querySelectorAll('.skill-circle').forEach(circle => {
-    const percent = circle.getAttribute('data-percent');
-    circle.style.setProperty('--percent', `${percent}%`);
+document.addEventListener('DOMContentLoaded', () => {
+  const skillCircles = document.querySelectorAll('.skill-circle span');
+  skillCircles.forEach(circle => {
+    const percentage = parseInt(circle.textContent);
+    circle.style.background = `conic-gradient(#00ff00 0% ${percentage}%, #ccc ${percentage}% 100%)`;
+  });
 });
