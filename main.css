@@ -1,34 +1,40 @@
-body {
+    body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
     color: #ffffff;
-}
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    }
 
-.navbar {
+    .navbar {
     padding: 10px 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     width: 100%;
     text-align: center;
     position: fixed;
     top: 0;
     z-index: 1000;
-}
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
 
-.nav-menu {
+    .nav-menu {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 30px;
-}
+    }
 
-.nav-item {
+    .nav-item {
     display: inline-flex;
     align-items: center;
-}
+    }
 
-.nav-link {
+    .nav-link {
     color: #ccc;
     text-decoration: none;
     font-size: 14px;
@@ -37,22 +43,22 @@ body {
     gap: 5px;
     padding: 5px 10px;
     transition: color 0.3s, text-shadow 0.3s;
-}
+    }
 
-.nav-link i {
+    .nav-link i {
     font-size: 20px;
-}
+    }
 
-.nav-item.active .nav-link {
+    .nav-item.active .nav-link {
     color: #00AFFF;
     text-shadow: 0 0 10px #00AFFF;
-}
+    }
 
-.nav-link:hover {
+    .nav-link:hover {
     color: #00AFFF;
-}
+    }
 
-.hero {
+    .hero {
     text-align: center;
     padding: 50px 20px;
     background-image: url('assets/images/background.jpg');
@@ -61,23 +67,24 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-top: 60px;
-}
+    }
 
-.hero h1 {
+    .hero h1 {
     font-size: 3.5em;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: #00AFFF;
     text-shadow: 0 0 10px #00AFFF;
-}
+    }
 
-.hero p {
+    .hero p {
     font-size: 1.2em;
     margin: 10px 0;
     color: #ccc;
-}
+    }
 
-.contact-btn {
+    .contact-btn {
     display: inline-block;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7);
@@ -86,31 +93,31 @@ body {
     border-radius: 5px;
     margin-top: 20px;
     transition: background 0.3s;
-}
+    }
 
-.contact-btn:hover {
+    .contact-btn:hover {
     background: #00AFFF;
-}
+    }
 
-.social-icons {
+    .social-icons {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 15px;
     padding-bottom: 20px;
-}
+    }
 
-.social-link {
+    .social-link {
     color: #ccc;
     font-size: 24px;
     transition: color 0.3s;
-}
+    }
 
-.social-link:hover {
+    .social-link:hover {
     color: #00AFFF;
-}
+    }
 
-.about {
+    .about {
     text-align: center;
     padding: 50px 20px;
     background-image: url('assets/images/background.jpg');
@@ -119,25 +126,26 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-top: 60px;
-}
+    }
 
-.about h2 {
+    .about h2 {
     font-size: 2.5em;
     margin: 0 0 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: #00AFFF;
     text-shadow: 0 0 10px #00AFFF;
-}
+    }
 
-.about p {
+    .about p {
     font-size: 1.1em;
     margin: 0 auto 20px;
     max-width: 600px;
     color: #ccc;
     line-height: 1.6;
-}
+    }
 
-.resume-btn {
+    .resume-btn {
     display: inline-block;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7);
@@ -145,8 +153,69 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
-}
+    }
 
-.resume-btn:hover {
+    .resume-btn:hover {
     background: #00AFFF;
-}
+    }
+
+    .skills-section {
+    text-align: center;
+    padding: 80px 20px 20px;
+    margin-top: 60px;
+    max-width: 900px;
+    }
+
+    .skills-section h2 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00AFFF;
+    text-shadow: 0 0 10px #00AFFF;
+    }
+
+    .skills-section p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ccc;
+    }
+
+    .skills-charts {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    }
+
+    .chart {
+    text-align: center;
+    }
+
+    .chart p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ccc;
+    }
+
+    .technical-skills {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    }
+
+    .column {
+    text-align: left;
+    }
+
+    .column p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #ccc;
+    }
+
+    .column strong {
+    font-size: 1.2em;
+    color: #00AFFF;
+    }
