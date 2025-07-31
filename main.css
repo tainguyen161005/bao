@@ -186,6 +186,9 @@ body {
     position: relative;
     width: 120px;
     height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skill-circle::before {
@@ -199,6 +202,7 @@ body {
     background: conic-gradient(#00AFFF 0deg, #00AFFF var(--progress), transparent var(--progress) 360deg);
     -webkit-mask: radial-gradient(transparent 50%, #000 51%);
     mask: radial-gradient(transparent 50%, #000 51%);
+    z-index: 0;
 }
 
 .skill-circle::after {
@@ -224,9 +228,11 @@ body {
 }
 
 .skill-circle p {
-    margin-top: 10px;
+    position: relative;
+    margin-top: 30px; /* Adjusted to ensure it appears below the circle */
     font-size: 1em;
     color: #ccc;
+    z-index: 1;
 }
 
 .tech-skills {
