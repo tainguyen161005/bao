@@ -47,19 +47,42 @@ h2 {
 }
 
 .skill-item {
-  text-align: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
 }
 
 .skill-item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 2em;
   color: #00ff00;
-  display: block;
-  margin-bottom: 5px;
+  z-index: 2;
 }
 
 .skill-item p {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
   font-size: 1.2em;
+  z-index: 2;
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#00ff00 0%, #00ff00 0%, #ccc 0% 100%);
+  transform: rotate(0deg);
+  z-index: 1;
 }
 
 .tech-skills {
