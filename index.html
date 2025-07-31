@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohamed Azouaoui</title>
+    <title>Home - Mohamed Azouaoui</title>
     <link rel="stylesheet" href="main.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -11,18 +11,20 @@
     <!-- Navigation -->
     <nav class="navbar">
         <ul class="nav-menu">
-            <li class="nav-item active"><a href="#" class="nav-link" onclick="loadPage('home.html')"><i class='bx bx-home'></i> HOME</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" onclick="loadPage('about.html')"><i class='bx bx-user'></i> ABOUT</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" onclick="loadPage('skills.html')"><i class='bx bx-code'></i> SKILLS</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" onclick="loadPage('portfolio.html')"><i class='bx bx-diamond'></i> PORTFOLIO</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" onclick="loadPage('contact.html')"><i class='bx bx-envelope'></i> CONTACT</a></li>
+            <li class="nav-item active"><a href="menu.html" class="nav-link"><i class='bx bx-home'></i> HOME</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class='bx bx-user'></i> ABOUT</a></li>
+            <li class="nav-item"><a href="skills.html" class="nav-link"><i class='bx bx-code'></i> SKILLS</a></li>
+            <li class="nav-item"><a href="portfolio.html" class="nav-link"><i class='bx bx-diamond'></i> PORTFOLIO</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class='bx bx-envelope'></i> CONTACT</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content with iframe -->
-    <div class="main-content">
-        <iframe id="contentFrame" src="home.html" frameborder="0" width="100%" height="1200px" style="border: none;"></iframe>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>MOHAMED AZOUAOUI</h1>
+        <p>I AM A SOFTWARE ENGINEER AND A FULL STACK WEB DEVELOPER</p>
+        <a href="contact.html" class="contact-btn">CONTACT ME</a>
+    </section>
 
     <!-- Social Icons -->
     <div class="social-icons">
@@ -33,18 +35,6 @@
         <a href="#" class="social-link"><i class='bx bxl-github'></i></a>
     </div>
 
-    <!-- Scripts -->
-    <script>
-        // Load page inside iframe
-        function loadPage(page) {
-            document.getElementById("contentFrame").src = page;
-
-            // Highlight the active menu
-            document.querySelectorAll(".nav-item").forEach((item) => item.classList.remove("active"));
-            const link = [...document.querySelectorAll(".nav-link")].find((l) => l.getAttribute("onclick").includes(page));
-            if (link) link.closest(".nav-item").classList.add("active");
-        }
-    </script>
     <script src="main.js"></script>
 </body>
 </html>
