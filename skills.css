@@ -1,123 +1,51 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
     background-color: #1a1a1a;
-    color: #ffffff;
-    background-image: url('assets/images/background.jpg'); /* Thay bằng đường dẫn ảnh nền của bạn */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.navbar {
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-menu {
-    list-style: none;
-    padding: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    gap: 30px;
-}
-
-.nav-item {
-    display: inline-flex;
     align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.nav-link {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-    transition: color 0.3s;
-}
-
-.nav-link i {
-    font-size: 20px;
-}
-
-.nav-item.active .nav-link {
-    color: #00AFFF;
-}
-
-.nav-link:hover {
-    color: #00AFFF;
-}
-
-.skills-section {
-    padding: 80px 20px 50px;
-    text-align: center;
-    margin-top: 60px;
-    position: relative;
-}
-
-.skills-section h2 {
-    font-size: 2.5em;
-    margin: 0 0 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #00AFFF;
-}
-
-.skills-section p {
-    font-size: 1.1em;
-    color: #ccc;
-    margin-bottom: 40px;
-}
-
-.skills-charts {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.chart {
+.skills-container {
     text-align: center;
 }
 
-.circle {
+.skill-circle {
     width: 120px;
     height: 120px;
+    background: conic-gradient(#4CAF50 0% var(--percent), #ccc var(--percent) 100%);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin: 20px;
 }
 
-.chart p {
-    font-size: 1.1em;
-    color: #ccc;
+.skill-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.skill-label {
     margin-top: 10px;
-}
-
-.skills-section h3 {
-    font-size: 1.5em;
-    color: #00AFFF;
-    margin: 20px 0 10px;
+    font-size: 18px;
 }
 
 .technical-skills {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    font-size: 0.95em;
+    margin-top: 30px;
 }
 
-.technical-skills .column {
-    min-width: 180px;
-    color: #ccc;
+.technical-skills ul {
+    list-style: none;
+    padding: 0;
 }
 
-.technical-skills p {
-    margin: 8px 0;
+.technical-skills ul li {
+    margin: 10px 0;
 }
