@@ -1,47 +1,47 @@
 const projects = [
   {
-    title: 'NUMGAZ',
-    description: 'Quản lý mạng lưới cấp gas theo dạng GIS.',
-    tags: ['JavaScript', 'Leaflet', 'PostgreSQL', 'Node.js']
+    title: "NUMGAZ",
+    image: "project1.jpg",
+    description: "Digitalization of gas networks with spatial tools and PostgreSQL backend.",
+    tags: ["Java", "JSP", "PostgreSQL", "ArcGIS", "Dojo", "HTML5"]
   },
   {
-    title: 'TRAVAUX',
-    description: 'Quản lý can thiệp trên đường cho chính quyền.',
-    tags: ['Node', 'Express', 'ArcGIS', 'HTML5']
+    title: "PRO SIDEBAR",
+    image: "project2.jpg",
+    description: "Responsive sidebar template built with Bootstrap and JavaScript.",
+    tags: ["Bootstrap", "HTML5", "CSS3", "JavaScript"]
   },
   {
-    title: 'WEBLAB',
-    description: 'Hệ thống quản lý thông tin phòng thí nghiệm.',
-    tags: ['PHP', 'MySQL', 'Bootstrap', 'Chart.js']
+    title: "WEBLAB",
+    image: "project3.jpg",
+    description: "Laboratory Information System with user-friendly interface.",
+    tags: ["HTML", "Angular", "Spring", "MySQL"]
   },
   {
-    title: 'ROOT SYSTEM',
-    description: 'Website doanh nghiệp chuyên về tài chính.',
-    tags: ['React', 'SCSS', 'REST API']
+    title: "ROOT",
+    image: "project4.jpg",
+    description: "Corporate landing page with services and contact sections.",
+    tags: ["HTML", "CSS", "JS"]
   },
   {
-    title: 'LIGHTNING DASHBOARD',
-    description: 'Bảng điều khiển quản lý dành cho admin.',
-    tags: ['Angular', 'Bootstrap', 'Chart.js', 'Typescript']
+    title: "TRAVAUX",
+    image: "project5.jpg",
+    description: "Geospatial tools for managing map-based tasks and services.",
+    tags: ["JavaScript", "PostgreSQL", "HTML", "CSS"]
   }
 ];
 
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modal-title");
-const modalDesc = document.getElementById("modal-description");
-const modalTags = document.getElementById("modal-tags");
-const closeBtn = document.querySelector(".close");
+function openPopup(index) {
+  const popup = document.getElementById("popup");
+  const project = projects[index];
+  document.getElementById("popup-image").src = project.image;
+  document.getElementById("popup-title").innerText = project.title;
+  document.getElementById("popup-description").innerText = project.description;
+  const tagsHTML = project.tags.map(tag => `<span>${tag}</span>`).join("");
+  document.getElementById("popup-tags").innerHTML = tagsHTML;
+  popup.classList.remove("hidden");
+}
 
-document.querySelectorAll('.portfolio-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const index = item.getAttribute('data-index');
-    const project = projects[index];
-    modalTitle.textContent = project.title;
-    modalDesc.textContent = project.description;
-    modalTags.innerHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-    modal.style.display = "flex";
-  });
-});
-
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+function closePopup() {
+  document.getElementById("popup").classList.add("hidden");
+}
