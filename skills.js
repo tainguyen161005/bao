@@ -1,4 +1,4 @@
-  // Draw skill circles
+document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.circle').forEach(canvas => {
     const ctx = canvas.getContext('2d');
     const percent = parseInt(canvas.dataset.percent);
