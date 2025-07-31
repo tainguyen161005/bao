@@ -55,11 +55,8 @@ body {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-image: url(images/background.jpg);
+    background: url(images/background.jpg) no-repeat center center fixed; /* Updated to match #skills */
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     margin-top: 60px;
 }
 
@@ -113,11 +110,8 @@ body {
 .about {
     text-align: center;
     padding: 50px 20px;
-    background-image: url(images/background.jpg);
+    background: url(images/background.jpg) no-repeat center center fixed; /* Updated to match #skills */
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     margin-top: 60px;
 }
 
@@ -155,7 +149,7 @@ body {
 #skills {
     text-align: center;
     padding: 100px 20px 50px;
-    background: url(images/background.jpg); no-repeat center center fixed;
+    background: url(images/background.jpg) no-repeat center center fixed;
     background-size: cover;
     margin-top: 60px;
 }
