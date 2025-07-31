@@ -152,52 +152,78 @@ body {
 }
 
 /* ===== PHẦN KỸ NĂNG MỚI ===== */
-.skills {
+#skills {
     text-align: center;
-    padding: 80px 20px 50px;
-    background-image: url('assets/images/background.jpg');
+    padding: 100px 20px 50px;
+    background: url('assets/images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     margin-top: 60px;
 }
 
-.skills h2 {
+#skills h1 {
     font-size: 2.5em;
     margin: 0 0 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px #00AFFF;
 }
 
-.skills p {
-    font-size: 1.1em;
+#skills h2 {
+    font-size: 1.5em;
     color: #ccc;
     margin-bottom: 40px;
 }
 
-.best-skills {
+.skill-circles {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 40px;
+    flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
-.skill-item {
-    text-align: center;
-}
-
-.circle {
+.skill-circle {
+    position: relative;
     width: 120px;
     height: 120px;
 }
 
-.skill-name {
-    font-size: 1.1em;
-    color: #ccc;
+.skill-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.skill-circle p {
     margin-top: 10px;
+    font-size: 1em;
+    color: #ccc;
+}
+
+.skill-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#00AFFF 0deg, #00AFFF var(--progress), #333 var(--progress) 360deg);
+    clip-path: circle(50%);
+}
+
+.skill-circle::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    z-index: -1;
 }
 
 .tech-skills {
@@ -208,30 +234,13 @@ body {
     font-size: 0.95em;
 }
 
-.tech-skills div {
+.tech-skills ul {
+    list-style: none;
+    padding: 0;
     min-width: 180px;
     color: #ccc;
 }
 
-.tech-skills p {
+.tech-skills li {
     margin: 8px 0;
-}
-
-.skills h2,
-.skills p,
-.best-skills,
-.tech-skills {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
