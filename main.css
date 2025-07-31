@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -68,13 +69,37 @@ body {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px #00AFFF;
+    color: #00AFFF;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00AFFF;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
 }
 
 .hero p {
     font-size: 1.2em;
     margin: 10px 0;
     color: #ccc;
+    animation: pulseText 3s ease-in-out infinite;
+}
+
+@keyframes pulseText {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 .contact-btn {
@@ -90,6 +115,7 @@ body {
 
 .contact-btn:hover {
     background: #00AFFF;
+    text-shadow: 0 0 10px #00AFFF, 0 0 20px #00AFFF;
 }
 
 .social-icons {
@@ -121,12 +147,25 @@ body {
     margin-top: 60px;
 }
 
-.about h2 {
+.about h2,
+.skills h2,
+.portfolio h2,
+.contact h2 {
     font-size: 2.5em;
     margin: 0 0 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 10px #00AFFF;
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 5px #00AFFF, 0 0 10px #00AFFF;
+    }
+    to {
+        text-shadow: 0 0 20px #00AFFF, 0 0 30px #00AFFF;
+    }
 }
 
 .about p {
@@ -149,6 +188,7 @@ body {
 
 .resume-btn:hover {
     background: #00AFFF;
+    text-shadow: 0 0 10px #00AFFF, 0 0 20px #00AFFF;
 }
 
 .skills {
@@ -160,14 +200,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-top: 60px;
-}
-
-.skills h2 {
-    font-size: 2.5em;
-    margin: 0 0 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #00AFFF;
 }
 
 .skill-list {
@@ -195,14 +227,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-top: 60px;
-}
-
-.portfolio h2 {
-    font-size: 2.5em;
-    margin: 0 0 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #00AFFF;
 }
 
 .portfolio-item {
@@ -233,16 +257,21 @@ body {
     margin-top: 60px;
 }
 
-.contact h2 {
-    font-size: 2.5em;
-    margin: 0 0 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #00AFFF;
-}
-
 .contact p {
     font-size: 1.1em;
     margin: 10px 0;
     color: #ccc;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
