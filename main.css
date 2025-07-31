@@ -3,12 +3,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+    scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt */
 }
 
 .navbar {
@@ -67,6 +62,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-top: 60px;
+    min-height: 100vh; /* Đảm bảo section chiếm toàn màn hình */
 }
 
 .hero h1 {
@@ -74,8 +70,7 @@ body {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #00AFFF;
-    opacity: 0; /* Ban đầu ẩn để animation hoạt động */
+    text-shadow: 0 0 10px #00AFFF;
 }
 
 .hero p {
@@ -97,7 +92,6 @@ body {
 
 .contact-btn:hover {
     background: #00AFFF;
-    text-shadow: 0 0 10px #00AFFF, 0 0 20px #00AFFF;
 }
 
 .social-icons {
@@ -118,72 +112,139 @@ body {
     color: #00AFFF;
 }
 
-/* Animation đã điều chỉnh */
-.animated-name {
-    animation: fadeDown 1.2s ease-out forwards;
-    opacity: 0;
-    transform: translateY(-40px); /* Di chuyển từ trên xuống */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
-.animated-title {
-    animation: fadeCenter 1.2s ease-out forwards;
-    opacity: 0;
-    transform: scale(0.95); /* Hiệu ứng từ trong ra ngoài */
-    animation-delay: 1.2s;
+.about h2 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00AFFF;
 }
 
-.animated-contact {
-    animation: fadeUp 1.2s ease-out forwards;
-    opacity: 0;
-    transform: translateY(40px); /* Di chuyển từ dưới lên */
-    animation-delay: 2.4s;
+.about p {
+    font-size: 1.1em;
+    margin: 0 auto 20px;
+    max-width: 600px;
+    color: #ccc;
+    line-height: 1.6;
 }
 
-.social-icons {
-    animation: fadeUp 1.2s ease-out forwards;
-    opacity: 0;
-    transform: translateY(40px); /* Di chuyển từ dưới lên */
-    animation-delay: 3.6s;
+.resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.fade-down {
-    opacity: 0;
-    transform: translateY(-40px);
-    animation: fadeDown 1.2s ease-out forwards;
-    animation-delay: 0.5s;
+.resume-btn:hover {
+    background: #00AFFF;
 }
 
-.fade-center {
-    opacity: 0;
-    transform: scale(0.95);
-    animation: fadeCenter 1.2s ease-out forwards;
-    animation-delay: 1s;
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 1.2s ease-out forwards;
-    animation-delay: 1.5s;
+.skills h2 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00AFFF;
 }
 
-@keyframes fadeDown {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.skill-list {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-@keyframes fadeCenter {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.skill-item {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ccc;
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.skill-item span {
+    float: right;
+    color: #00AFFF;
+}
+
+.portfolio {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.portfolio h2 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00AFFF;
+}
+
+.portfolio-item {
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+.portfolio-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.portfolio-item p {
+    margin: 0;
+    color: #ccc;
+}
+
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00AFFF;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #ccc;
 }
