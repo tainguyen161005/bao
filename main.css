@@ -55,7 +55,7 @@ body {
 .hero {
     text-align: center;
     padding: 100px 20px 50px;
-    background: url(images/background.jpg) no-repeat center center fixed; /* Matching #skills */
+    background: url(images/background.jpg) no-repeat center center fixed;
     background-size: cover;
     margin-top: 60px;
 }
@@ -109,8 +109,8 @@ body {
 
 .about {
     text-align: center;
-   padding: 100px 20px 50px;
-    background: url(images/background.jpg) no-repeat center center fixed; /* Matching #skills */
+    padding: 100px 20px 50px;
+    background: url(images/background.jpg) no-repeat center center fixed;
     background-size: cover;
     margin-top: 60px;
 }
